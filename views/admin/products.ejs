@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin: Products</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin: Products</h1>
+        <a href="/admin/add">Add New Product</a>
+        <ul>
+            <% products.forEach(product => { %>
+            <li>
+                <h2><%= product.name %></h2>
+                <p>Price: $<%= product.price %></p>
+                <p>Quantity: <%= product.quantity %></p>
+                <a href="/admin/edit/<%= product.id %>">Edit</a> | 
+                <a href="/admin/delete/<%= product.id %>">Delete</a>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
