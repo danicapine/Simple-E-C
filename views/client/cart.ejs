@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Your Cart</h1>
-        <ul class="cart-list">
-            <% cart.forEach(item => { %>
-            <li>
-                <span><%= item.name %></span>
-                <span>$<%= item.price %> x <%= item.quantity %></span>
-            </li>
-            <% }); %>
-        </ul>
-        <a href="/checkout">Proceed to Checkout</a>
-    </div>
+    <h1>Your Cart</h1>
+    <ul>
+        <% cart.forEach(item => { %>
+        <li>
+            <%= item.name %> - $<%= item.price %> x <%= item.quantity %>
+        </li>
+        <% }); %>
+    </ul>
+    <a href="/checkout">Proceed to Checkout</a>
 </body>
 </html>

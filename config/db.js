@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 
+// Create the MySQL connection
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -7,6 +8,7 @@ const db = mysql.createConnection({
     database: 'ecommerce_db'
 });
 
+// Connect to MySQL
 db.connect((err) => {
     if (err) {
         console.error('Database connection failed: ' + err.stack);
